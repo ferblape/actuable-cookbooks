@@ -7,6 +7,7 @@ Chef cookbooks to use with Chef solo.
   - login as `root`
   - `cd /tmp`
   - `curl https://raw.github.com/ferblape/actuable-cookbooks/master/install.sh | sh`
+  - change shell to `/bin/bash` for `www-data`
   - generate ssh keys and configure git repository
   - `git clone git@github.com:ferblape/actuable-cookbooks.git`
   - `sudo chef-solo -j roles/<role>.json -c solo.rb`
