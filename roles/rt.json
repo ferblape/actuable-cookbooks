@@ -13,7 +13,7 @@
     "recipe[node]",
     "recipe[ssh]",
     "recipe[users]",
-    "recipe[application]",
+    "recipe[application]"
   ],
   "monit": {
     "alert_recipients": "fb@actuable.com"
