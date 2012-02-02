@@ -8,7 +8,7 @@ kill $PID
 echo "Killing... "$PID
 rm $PIDFILE
 sleep 5
-nohup `which node` /var/www/actuable-rt/app.js > out.log &
+nohup `which node` /var/www/actuable-rt/app.js > /var/www/actuable-rt/out.log &
 sleep 1
 PID=`ps aux | grep node | grep -v grep | awk '{print $2}'`
 echo $PID > $PIDFILE
