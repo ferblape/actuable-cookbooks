@@ -1,6 +1,6 @@
 set[:redis][:version] = "2.4.7"
 set[:redis][:port] = 6379
-set[:redis][:bind_address] = "127.0.0.1"
+set[:redis][:bind_address] = "192.168.152.171"
 set[:redis][:timeout] = 300
 set[:redis][:databases] = 8
 
