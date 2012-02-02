@@ -1,0 +1,14 @@
+<%= @p[:files].split(",").join("\n") %> {
+    <%= @p[:frequency] %>
+    rotate <%= @p[:rotate_count] %>
+    <%= 'compress'      if @p[:compress] %>
+    <%= 'dateext'       if @p[:dateext] %>
+    <%= 'missingok'     if @p[:missing_ok] %>
+    <%= 'notifempty'    if !@p[:rotate_if_empty] %>
+    <%= 'copytruncate'  if @p[:copytruncate] %>
+    <%= 'delaycompress' if @p[:delaycompress] %>
+    sharedscripts
+    postrotate
+        <%= @p[:restart_command] %>
+    endscript
+}

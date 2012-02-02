@@ -1,0 +1,19 @@
+{
+  "name": "rt",
+  "description": "Realtime stats server",
+  "chef_type": "role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[cron]",
+    "recipe[logrotate]",
+    "recipe[iptables]",
+    "recipe[monit]",
+    "recipe[postfix]",
+    "recipe[redis]",
+    "recipe[node]",
+    "recipe[application]"
+  ],
+  "monit": {
+    "alert_recipients": "fb@actuable.com"
+  }
+}

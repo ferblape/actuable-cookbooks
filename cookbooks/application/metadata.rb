@@ -1,0 +1,6 @@
+maintainer       "Actuable"
+maintainer_email "fb@actuable.com"
+license          "Apache 2.0"
+description      "Setups the directories for the application"
+version          "0.2.0"
+depends          "cron"

@@ -1,0 +1,5 @@
+maintainer       "Actuable"
+maintainer_email "fb@actuable.com"
+license          "Apache 2.0"
+description      "Installs/Configures cron"
+version          "0.2.0"

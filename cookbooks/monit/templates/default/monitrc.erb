@@ -1,0 +1,9 @@
+set daemon 30
+set mailserver localhost
+set httpd port 9000
+use address localhost
+allow localhost
+set alert <%= node[:monit][:alert_recipients] %>
+set logfile syslog facility log_daemon
+
+INCLUDE "/etc/monit/*.monitrc"

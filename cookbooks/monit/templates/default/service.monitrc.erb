@@ -1,0 +1,7 @@
+check process <%= @p[:name] %> with pidfile <%= @p[:pid_file]  %>
+   start program = "<%= @p[:start_program] %>"
+   stop program = "<%= @p[:stop_program]  %>"
+   <% if @p[:alert] %>
+   alert <%= @p[:alert] %>
+   <% end %>
+   <%= @p[:checks] %>
