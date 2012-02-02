@@ -1,6 +1,0 @@
-check process delayed_job with pidfile /home/ubuntu/www/toldo/shared/pids/delayed_job.pid
-  every 5 cycles
-  start program = "/bin/su -c '/usr/bin/env PATH=$PATH:/usr/local/bin RAILS_ENV=production /home/ubuntu/www/toldo/current/script/delayed_job start' - ubuntu"
-  stop program = "/bin/su -c '/usr/bin/env PATH=$PATH:/usr/local/bin RAILS_ENV=production /home/ubuntu/www/toldo/current/script/delayed_job stop' - ubuntu'"
-   alert blat+monit@tol.do only on { timeout }
-   if 5 restarts within 5 cycles then timeout

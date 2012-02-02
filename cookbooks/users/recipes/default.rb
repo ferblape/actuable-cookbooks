@@ -1,10 +1,10 @@
 include_recipe 'ssh'
 
-cookbook_file "authorized keys for ubuntu" do
-  path "/home/ubuntu/.ssh/authorized_keys"
-  source "authorized_keys_ubuntu"
-  owner "ubuntu"
-  group "ubuntu"
+cookbook_file "authorized keys for www-data" do
+  path "/var/www/.ssh/authorized_keys"
+  source "authorized_keys_www-data"
+  owner "www-data"
+  group "www-data"
   mode 0700
-  not_if { File.exists?("/home/ubuntu/.ssh/authorized_keys") }
+  not_if { File.exists?("/var/www/.ssh/authorized_keys") }
 end
