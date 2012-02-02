@@ -11,7 +11,9 @@
     "recipe[postfix]",
     "recipe[redis]",
     "recipe[node]",
-    "recipe[application]"
+    "recipe[ssh]",
+    "recipe[users]",
+    "recipe[application]",
   ],
   "monit": {
     "alert_recipients": "fb@actuable.com"

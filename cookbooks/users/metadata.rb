@@ -1,0 +1,5 @@
+maintainer       "Actuable"
+maintainer_email "fb@actuable.com"
+license          "Apache 2.0"
+description      "Setup ubuntu user"
+version          "0.1.0"

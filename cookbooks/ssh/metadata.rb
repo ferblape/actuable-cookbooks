@@ -1,0 +1,5 @@
+maintainer       "Actuable"
+maintainer_email "fb@actuable.com"
+license          "Apache 2.0"
+description      "Setup SSH"
+version          "0.1.0"
