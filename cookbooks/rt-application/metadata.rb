@@ -1,0 +1,5 @@
+maintainer       "Actuable"
+maintainer_email "fb@actuable.com"
+license          "Apache 2.0"
+description      "Setup and deploy RT application"
+version          "0.1.0"
