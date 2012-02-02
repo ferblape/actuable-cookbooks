@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "description": "App server",
+  "chef_type": "role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[cron]",
+    "recipe[logrotate]",
+    "recipe[iptables]",
+    "recipe[monit]",
+    "recipe[postfix]",
+    "recipe[ssh]",
+    "recipe[users]",
+    "recipe[gems]",
+    "recipe[application]"
+  ],
+  "monit": {
+    "alert_recipients": "fb@actuable.com"
+  }
+}
