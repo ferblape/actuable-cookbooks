@@ -30,4 +30,10 @@ cd ruby-1.9.3-p0 &&
 autoconf &&
 ./configure --prefix=/usr/local --enable-shared --disable-install-doc --with-opt-dir=/usr/local/lib &&
 make && make install &&
-gem install chef --no-ri --no-rdoc
+gem install chef --no-ri --no-rdoc &&
+useradd -p paCYzAqeeJ2cE -d /home/ubuntu -m -s /bin/bash -U ubuntu &&
+usermod -a -G admin ubuntu
+su ubuntu;
+cd /home/ubuntu;
+mkdir .chef;
+cd .chef
