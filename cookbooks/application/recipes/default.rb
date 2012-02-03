@@ -1,6 +1,7 @@
-include_recipe 'cron'
-
-package "libmysqlclient-dev"
+package "libmysqlclient-dev" do
+  action :install
+  options "--force-yes"
+end
 
 directory "/var/www" do
   owner "www-data"
