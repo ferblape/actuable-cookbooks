@@ -55,7 +55,7 @@ monit "redis-server" do
   stop_program "/etc/init.d/redis-server stop"
   alert "#{node[:monit][:alert_recipients]} only on { timeout }"
   checks <<-CHECKS
-  if failed host localhost port #{node[:redis][:port]} then restart
+  if failed host 192.168.152.171 port #{node[:redis][:port]} then restart
   if 5 restarts within 5 cycles then timeout
 CHECKS
 end
