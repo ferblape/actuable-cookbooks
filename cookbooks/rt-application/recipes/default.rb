@@ -27,3 +27,20 @@ end
 execute "reboot the server" do
   command "/var/www/actuable-rt/server.sh"
 end
+
+cron "reboot node server" do
+  user "www-data"
+  hour "*"
+  minute "*/30"
+  command "/var/www/actuable-rt/server.sh"
+end
+
+logrotate "actuable-rt" do
+  files "/var/www/actuable-rt/out.log"
+  frequency "weekly"
+  missing_ok
+  compress
+  delaycompress
+  copytruncate
+  restart_command "/var/www/actuable-rt/server.sh"
+end
