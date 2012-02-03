@@ -1,5 +1,13 @@
-package "nfs-common"
-package "portmap"
+package "nfs-common" do
+  action :install
+  options "--force-yes"
+end
+
+package "portmap" do
+  action :install
+  options "--force-yes"
+end
+
 
 cookbook_file "/etc/fstab" do
   path "/etc/fstab"
