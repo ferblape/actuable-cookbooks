@@ -1,0 +1,7 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>   <options>       <dump>  <pass>
+proc	    /proc	   proc     defaults	0       0
+/dev/xvda       /	       ext3     noatime,errors=remount-ro 0       1
+/dev/xvdb       none	    swap     sw	      0       0
+192.168.152.20:/var/www/actuable/shared/system/ /var/www/actuable/shared/system/   nfs      rw,sync,hard,intr  0     1

@@ -12,7 +12,8 @@
     "recipe[ssh]",
     "recipe[users]",
     "recipe[gems]",
-    "recipe[application]"
+    "recipe[application]",
+    "recipe[nfs-client]"
   ],
   "monit": {
     "alert_recipients": "fb@actuable.com"
