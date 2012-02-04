@@ -14,7 +14,7 @@
     "recipe[gems]",
     "recipe[application]",
     "recipe[nfs-client]",
-    "recipes[unicorn]"
+    "recipe[unicorn]"
   ],
   "monit": {
     "alert_recipients": "fb@actuable.com"
