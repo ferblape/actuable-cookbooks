@@ -10,13 +10,13 @@ template "/etc/init.d/unicorn" do
   group "root"
 end
 
-command "chmod +x /etc/init.d/unicorn" do
-  execute "chmod +x /etc/init.d/unicorn"
+execute "chmod +x /etc/init.d/unicorn" do
+  command "chmod +x /etc/init.d/unicorn"
   user "root"
 end
 
-command "add to defaults" do
-  execute "/usr/sbin/update-rc.d -f unicorn defaults"
+execute "add to defaults" do
+  command "/usr/sbin/update-rc.d -f unicorn defaults"
   user "root"
 end
 
