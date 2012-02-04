@@ -3,6 +3,11 @@ package "libmysqlclient-dev" do
   options "--force-yes"
 end
 
+package "mysql-client" do
+  action :install
+  options "--force-yes"
+end
+
 directory "/var/www" do
   owner "www-data"
   group "www-data"
