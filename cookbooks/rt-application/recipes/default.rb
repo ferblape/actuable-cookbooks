@@ -36,6 +36,7 @@ cron "reboot node server" do
   hour "*"
   minute "*/30"
   command "/var/www/actuable-rt/server.sh"
+  path "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
 end
 
 logrotate "actuable-rt" do
