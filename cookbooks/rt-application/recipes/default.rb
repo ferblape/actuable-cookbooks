@@ -8,11 +8,13 @@ end
 
 execute "clone repository" do
   command "git clone git://gist.github.com/1438024.git actuable-rt"
+  user "www-data"
   not_if { Dir.exists?("/var/www/actuable-rt") }
 end
 
 execute "update the code" do
   command "cd /var/www/actuable-rt; git pull"
+  user "www-data"
 end
 
 cookbook_file "server script" do
@@ -26,6 +28,7 @@ end
 
 execute "reboot the server" do
   command "/var/www/actuable-rt/server.sh"
+  user "www-data"
 end
 
 cron "reboot node server" do
