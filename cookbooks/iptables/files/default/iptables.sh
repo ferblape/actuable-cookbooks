@@ -51,11 +51,3 @@ iptables -A INPUT -s 192.168.152.171 -p tcp --destination-port 2049 -j ACCEPT
 iptables -A INPUT -s 192.168.176.63 -p tcp --destination-port 2049 -j ACCEPT
 iptables -A INPUT -s 192.168.186.70 -p tcp --destination-port 2049 -j ACCEPT
 iptables -A INPUT -p tcp --destination-port 2049 -j REJECT
-
-# RCPbind
-iptables -A INPUT -s 192.168.152.20 -p tcp --destination-port 111 -j ACCEPT
-iptables -A INPUT -s 192.168.152.171 -p tcp --destination-port 111 -j ACCEPT
-iptables -A INPUT -s 192.168.176.63 -p tcp --destination-port 111 -j ACCEPT
-iptables -A INPUT -s 192.168.186.70 -p tcp --destination-port 111 -j ACCEPT
-iptables -A INPUT -p tcp --destination-port 111 -j REJECT
-
