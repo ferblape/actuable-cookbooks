@@ -39,3 +39,43 @@ directory "/var/www/actuable/shared/system" do
   action :create
   not_if { Dir.exists?("/var/www/actuable/shared/system") }
 end
+
+directory "/var/www/actuable/shared/log" do
+  owner "www-data"
+  group "www-data"
+  mode "0750"
+  action :create
+  not_if { Dir.exists?("/var/www/actuable/shared/log") }
+end
+
+directory "/var/www/actuable/shared/pids" do
+  owner "www-data"
+  group "www-data"
+  mode "0750"
+  action :create
+  not_if { Dir.exists?("/var/www/actuable/shared/pids") }
+end
+
+directory "/var/www/actuable/shared/sitemaps" do
+  owner "www-data"
+  group "www-data"
+  mode "0750"
+  action :create
+  not_if { Dir.exists?("/var/www/actuable/shared/sitemaps") }
+end
+
+directory "/var/www/actuable/shared/blog" do
+  owner "www-data"
+  group "www-data"
+  mode "0750"
+  action :create
+  not_if { Dir.exists?("/var/www/actuable/shared/blog") }
+end
+
+directory "/var/www/actuable/shared/static" do
+  owner "www-data"
+  group "www-data"
+  mode "0750"
+  action :create
+  not_if { Dir.exists?("/var/www/actuable/shared/static") }
+end
