@@ -15,7 +15,8 @@ role :app, act02, act03, act04
 set :chef_path, "/var/www/.chef/actuable-cookbooks"
 
 desc "Run Chef cookbooks"
-task :chef! do
+task :chef do
+  run "cd #{chef_path}; git pull"
   sudo "chef-solo -j #{chef_path}/roles/rt.json  -c #{chef_path}/solo.rb",  :roles => :rt
   sudo "chef-solo -j #{chef_path}/roles/app.json -c #{chef_path}/solo.rb",  :roles => :app
 end
