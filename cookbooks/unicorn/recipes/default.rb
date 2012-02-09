@@ -1,8 +1,3 @@
-gem_package "unicorn" do
-  action :install
-  version @node[:unicorn][:version]
-end
-
 template "/etc/init.d/unicorn" do
   source "init_d_unicorn.erb"
   mode 0644

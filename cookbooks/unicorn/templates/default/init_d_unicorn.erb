@@ -18,11 +18,13 @@ DAEMON_OPTS="<%= @node[:unicorn][:daemon_options] %>"
 NAME=unicorn
 DESC="Unicorn app for Actuable"
 PID=<%= @node[:unicorn][:pid_path] %>
+APP_PATH=<%= @node[:unicorn][:app_path] %>
 
 case "$1" in
   start)
 	echo -n "Starting $DESC: "
 	$DAEMON $DAEMON_OPTS
+	cd $APP_PATH && bundle exec $DAEMON start $DAEMON_OPTS
 	echo "$NAME."
 	;;
   stop)
@@ -34,16 +36,11 @@ case "$1" in
 	echo -n "Restarting $DESC: "
         kill -QUIT `cat $PID`
 	sleep 1
-	$DAEMON $DAEMON_OPTS
+	cd $APP_PATH && bundle exec $DAEMON start $DAEMON_OPTS
 	echo "$NAME."
 	;;
-  reload)
-        echo -n "Reloading $DESC configuration: "
-        kill -HUP `cat $PID`
-        echo "$NAME."
-        ;;
   *)
-	echo "Usage: $NAME {start|stop|restart|reload}" >&2
+	echo "Usage: $NAME {start|stop|restart}" >&2
 	exit 1
 	;;
 esac
