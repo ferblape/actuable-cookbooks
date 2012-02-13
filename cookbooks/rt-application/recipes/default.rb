@@ -46,5 +46,4 @@ logrotate "actuable-rt" do
   compress
   delaycompress
   copytruncate
-  restart_command "/var/www/actuable-rt/server.sh"
 end
