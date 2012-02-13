@@ -23,8 +23,7 @@ APP_PATH=<%= @node[:unicorn][:app_path] %>
 case "$1" in
   start)
 	echo -n "Starting $DESC: "
-	$DAEMON $DAEMON_OPTS
-	cd $APP_PATH && bundle exec $DAEMON start $DAEMON_OPTS
+	cd $APP_PATH && bundle exec $DAEMON $DAEMON_OPTS
 	echo "$NAME."
 	;;
   stop)
@@ -36,7 +35,7 @@ case "$1" in
 	echo -n "Restarting $DESC: "
         kill -QUIT `cat $PID`
 	sleep 1
-	cd $APP_PATH && bundle exec $DAEMON start $DAEMON_OPTS
+	cd $APP_PATH && bundle exec $DAEMON $DAEMON_OPTS
 	echo "$NAME."
 	;;
   *)
