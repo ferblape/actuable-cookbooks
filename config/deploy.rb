@@ -10,7 +10,7 @@ set :act03, "178.79.169.135"
 set :act04, "178.79.187.31"
 
 role :rt,  act02
-role :app, act02, act03, act04
+role :app, act03, act04
 
 set :chef_path, "/var/www/.chef/actuable-cookbooks"
 
