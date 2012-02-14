@@ -79,3 +79,12 @@ directory "/var/www/actuable/shared/static" do
   action :create
   not_if { Dir.exists?("/var/www/actuable/shared/static") }
 end
+
+logrotate "actuable" do
+  files "/var/www/actuable/shared/log/*.log"
+  frequency "daily"
+  missing_ok
+  dateext
+  compress
+  restart_command "/etc/init.d/unicorn restart"
+end
